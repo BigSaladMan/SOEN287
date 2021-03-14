@@ -75,10 +75,8 @@ span.input-group-text.Begin {
   
 }
 input.form-control{
-  
   word-break: break-all;
   white-space: normal;
-  
 }
 
 div.width_adjustment {
@@ -93,6 +91,7 @@ div.input-group.row {
   word-break: break-all;
   white-space: normal;
 }
+
 
 /* Scroll menus */
 body{
