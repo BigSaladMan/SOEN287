@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Verdana, sans-serif;}
+p {
+  line-height: 0.25em;}
+.cartheader {
+  background-color: hsla(253, 1%, 1%, 0.9);
+  color: white;
+  border-style: solid;
+  padding: 0px 0px 15px 5px;
+  width: 600px;
+  height: 60px;
+  margin-left: 400px;
+  margin-top: 20px;}
+.cartbody {
+  background-color: hsla(253, 1%, 1%, 0.9);
+  color: white;
+  border-style: solid;
+  padding: 0px 0px 0px 5px;
+  width: 600px;
+  height: 325px;
+  margin-top: -7px;
+  margin-left: 400px;}
+.item1 {
+  border-style: solid;
+  padding: 0px 0px 0px 5px;
+  width: 550px;
+  height: 150px;
+  margin-left: 20px;
+  margin-top: 5px;}
+.total {
+  border-style: solid;
+  padding: 0px 0px 0px 5px;
+  width: 550px;
+  height: 80px;
+  margin-left: 20px;
+  margin-top: 65px;}
+img {
+  float: left;
+  width: 150px;
+  height: 100px;}
+p[class="totprice"] {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 0.5em;}
+.totalprice {
+  float: left;}
+.continueshopping {
+  margin-top: 20px;
+  margin-left: 150px;}
+.tocheckout {
+  margin-top: -30px;
+  margin-left: 325px;}
+footer {
+  margin-top: 20px;}

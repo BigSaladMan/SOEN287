@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditProduct</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/BackStore.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start of navigation bar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="../templates/Home.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/ProductList.html">Product List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/UserList.html">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/OrderList.html">Order List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <!-- End of navigation bar -->
+
+    <!-- Start of edit order section -->
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">List of users</li>
+        <li class="list-group-item ProductList">Current Orders</li>
+        <li class="list-group-item New">
+            <button type="button" class="btn btn-success" onclick=addList()>New Order</button>
+
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal" id="order">
+        <li class="list-group-item User">Jack Black</li>
+        <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary">Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">sango bango</li>
+        <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary">Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Big Salad Man</li>
+        <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary">Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Rayan Patel</li>
+        <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary">Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary">Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+
+    <!-- End of edit order section -->
+    <a href="../templates/OrderList.html" class="btn btn-info">Save</a>
+    <!--<button type="button" class="btn btn-info" id="savebtn" onclick="gop8()">Save</button> -->
+    <script src="BackStoreFcts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditUser</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/BackStore.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Start of navigation bar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="Home.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/ProductList.html">Product List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/UserList.html">User List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../templates/OrderList.html">Order List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <!-- End of navigation bar -->
+
+    <!-- Start of Creation part -->
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item Create">Create/Edit a User</li>
+    </ul>
+    <br>
+    <div class="width_adjustment">
+        <div class="input-group row">
+            <span class="input-group-text Begin">First and Last Name</span>
+            <input type="text" placeholder="Ex: Salad" aria-label="First name" class="form-control">
+            <input type="text" placeholder="Ex: Man" aria-label="Last name" class="form-control">
+        </div>
+        <div class="input-group row">
+            <span class="input-group-text Begin">Email</span>
+            <input type="email" placeholder="Ex: Salad_man@exampleInputEmail1.com" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="input-group row">
+            <span class="input-group-text Begin">Password</span>
+            <input type="text" placeholder="Ex: Password123" aria-label="Last name" class="form-control">
+        </div>
+        <div class="input-group row">
+            <span class="input-group-text Begin">Address</span>
+            <input type="text" placeholder="Ex: 63 Boulevard Samson, Laval, QC" aria-label="Last name"
+                class="form-control">
+        </div>
+        <div class="input-group row">
+            <span class="input-group-text Begin">Postal Code</span>
+            <input type="text" placeholder="Ex: H7X 3E6 " aria-label="Last name" class="form-control">
+        </div>
+        <div class="input-group row">
+            <span class="input-group-text Begin">Credit Card</span>
+            <input type="text" placeholder="Ex: 5500 0000 0000 0004" aria-label="Last name" class="form-control">
+        </div>
+        <br>
+        <form>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <!-- end of creation part -->
+
+
+</body>
+
+</html>

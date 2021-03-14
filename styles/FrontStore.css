@@ -1,0 +1,55 @@
+.header {
+    padding: 10px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 20px;   
+  }
+
+body{
+    background-image: url(../images/miscellaneous/Picture2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div h3 {
+   text-align: center;
+   padding: 15px;
+}
+section{
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
+section h2{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+ }
+
+h6{
+    text-align: center;
+}
+.fruits li{
+    text-align: center;
+    list-style-type: none;
+}
+
+
+.proteins li{
+    list-style-type: none;
+}
+
+.row a {
+    text-decoration: none;
+    color: black;
+}
+
+.header h2 a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,101 @@
+/* all buttons */
+ul.list-group.list-group-horizontal {
+  margin: auto;
+  width: 90%;
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+
+/* user names */
+li.list-group-item.ProductList {
+  width: 40%;
+  min-width: 200px;
+  word-wrap: break-word;
+}
+li.list-group-item.User {
+  width: 30%;
+  min-width: 180px;
+  text-align: left;
+  font-size: large;
+  word-wrap: break-word;
+}
+
+/* danger button */
+li.list-group-item.Delete {
+  width: 20%;
+  min-width: 130px;
+  align-content: center;
+  font-family: "Comic Sans MS";
+}
+button.btn.btn-danger {
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* edit button */
+li.list-group-item.Edit {
+  width: 20%;
+  min-width: 130px;
+  align-content: center;
+  font-family: "Comic Sans MS";
+}
+button.btn.btn-primary {
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* new button */
+li.list-group-item.New {
+  width: 40%;
+  min-width: 260px;
+  text-align: right;
+  font-family: "Comic Sans MS";
+}
+button.btn.btn-success {
+  width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* edit user section */
+li.list-group-item.Create {
+  margin: auto;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  font-size: large;
+}
+
+span.input-group-text.Begin {
+  width: 20%;
+  min-width: 160px;
+  overflow: auto;
+  
+}
+input.form-control{
+  
+  word-break: break-all;
+  white-space: normal;
+  
+}
+
+div.width_adjustment {
+  width: 90%;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+div.input-group.row {
+  border: 1px solid #000000;
+  margin: auto;
+  word-break: break-all;
+  white-space: normal;
+}
+
+/* Scroll menus */
+body{
+  overflow: auto;
+  min-width: 720px;
+}

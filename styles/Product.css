@@ -1,0 +1,48 @@
+img {
+  float: left;
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 450px;
+  height: 300px;}
+.itemdisplay {
+  border-style: solid;
+  background-color: hsla(253, 1%, 1%, 0.90);
+  margin-left: 50px;
+  margin-top: 30px;
+  width: 1200px;
+  height: 500px;}
+.picture {
+  float: left;}
+.descriptionandwhatnot {
+  color: white;
+  font-family: Arial, Verdana, sans-serif;
+  line-height: 0.75em;
+  float: left;
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 20px;}
+p.price {
+  font-weight: bold;}
+p.productname {
+  font-family: Verdana;}
+input {
+  padding: 2px 5px 2px 5px;
+  border-radius:5px;}
+input:hover {
+  background-color: black;
+  color: beige;}
+input:active {
+  background-color: #1A1729;
+  color: #FFC1C1;}
+button {
+  background-color: white;
+  border-style: none;
+  padding: 5px 2px 5px 5px;}
+button:hover {
+  background-color: black;
+  color: beige;}
+button:active {
+  background-color: #1A1729;
+  color: #FFC1C1;}
+footer {
+  margin-top: 20px;}
