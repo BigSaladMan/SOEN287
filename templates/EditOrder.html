@@ -8,6 +8,7 @@
     <title>EditOrder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/BackStore.css">
+    <script src="../scripts/backStore.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -43,65 +44,55 @@
     <!-- End of navigation bar -->
 
     <!-- Start of edit order section -->
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">List of users</li>
-        <li class="list-group-item ProductList">Current Orders</li>
-        <li class="list-group-item New">
-            <button type="button" class="btn btn-success">New Order</button>
-        </li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">John Snow</li>
-        <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
-        <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
-        </li>
-        <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
-        </li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">John Doe</li>
-        <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
-        <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
-        </li>
-        <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
-        </li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">Jonathan Doe</li>
-        <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
-        <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
-        </li>
-        <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
-        </li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">Johnny Doe</li>
-        <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
-        <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
-        </li>
-        <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
-        </li>
-    </ul>
+    <div id="orderSection">
+        <ul class="list-group list-group-horizontal Header">
+            <li class="list-group-item User">List of users</li>
+            <li class="list-group-item ProductList">Current Orders</li>
+            <li class="list-group-item New">
+                <button onclick="createNewOrder()" type="button" class="btn btn-success">New Order</button>
+            </li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item User">John Snow</li>
+            <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
+            <li class="list-group-item Edit">
+                <button type="button" class="btn btn-primary">Edit</button>
+            </li>
+            <li class="list-group-item Delete">
+                <button type="button" class="btn btn-danger">Delete</button>
+            </li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item User">John Doe</li>
+            <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
+            <li class="list-group-item Edit">
+                <button type="button" class="btn btn-primary">Edit</button>
+            </li>
+            <li class="list-group-item Delete">
+                <button type="button" class="btn btn-danger">Delete</button>
+            </li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item User">Jonathan Doe</li>
+            <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
+            <li class="list-group-item Edit">
+                <button type="button" class="btn btn-primary">Edit</button>
+            </li>
+            <li class="list-group-item Delete">
+                <button type="button" class="btn btn-danger">Delete</button>
+            </li>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item User">Johnny Doe</li>
+            <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
+            <li class="list-group-item Edit">
+                <button type="button" class="btn btn-primary">Edit</button>
+            </li>
+            <li class="list-group-item Delete">
+                <button type="button" class="btn btn-danger">Delete</button>
+            </li>
+        </ul>
+    </div>
     <br>
     <div class="width_adjustment">
         <form>
@@ -111,6 +102,7 @@
 
 
     <!-- End of edit order section -->
+
 </body>
 
 </html>
