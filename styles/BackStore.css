@@ -46,6 +46,22 @@ button.btn.btn-primary {
   text-align: center;
 }
 
+/* save button */
+a.btn.btn-info {
+  width: 8%;
+  position: relative;
+  left: 87%;
+  font-family: "Comic Sans MS";
+  word-wrap: break-word;
+}
+button.btn.btn-info {
+  width: 8%;
+  position: relative;
+  left: 87%;
+  font-family: "Comic Sans MS";
+  word-wrap: break-word;
+}
+
 /* new button */
 li.list-group-item.New {
   width: 40%;
