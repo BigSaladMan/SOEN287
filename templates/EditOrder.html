@@ -5,23 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EditOrder</title>
+    <title>OrderList</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/BackStore.css">
-    <script src="../scripts/backStore.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-
     <style>
         body {
             padding-top: 50px
@@ -30,6 +19,7 @@
 </head>
 
 <body>
+
     <!-- Start of navigation bar -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="../templates/Home.html">Home</a>
@@ -53,55 +43,55 @@
     <br>
     <!-- End of navigation bar -->
 
-    <!-- Start of edit order section -->
-    <div id="orderSection">
-        <ul class="list-group list-group-horizontal Header">
-            <li class="list-group-item User">List of users</li>
-            <li class="list-group-item ProductList">Current Orders</li>
-            <li class="list-group-item New">
-                <button onclick="createNewOrder()" type="button" class="btn btn-success">New Order</button>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div class="width_adjustment">
-        <form>
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
-    </div>
-    <!-- End of edit order section -->
-
-
-    <!--  Start of modals for edits -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit the order</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label class="col-form-label">Name</label>
-                        <input type="text" class="form-control" id="editUsersName">
-                    </div>
-                    <div class="mb-3">
-                        <label class="col-form-label">Products</label>
-                        <input type="text" class="form-control" id="editUsersOrder">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button onclick="editCurrentOrder()" type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of modals for edits -->
-    
+    <!-- Start of order section -->
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">List of users</li>
+        <li class="list-group-item ProductList">Orders</li>
+        <li class="list-group-item New">
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-success">New</button></a>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">John Snow</li>
+        <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
+        <li class="list-group-item Edit">
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">John Doe</li>
+        <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
+        <li class="list-group-item Edit">
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Jonathan Doe</li>
+        <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
+        <li class="list-group-item Edit">
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Johnny Doe</li>
+        <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
+        <li class="list-group-item Edit">
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger">Delete</button>
+        </li>
+    </ul>
+    <!-- End of order list -->
 
 </body>
 
