@@ -5,31 +5,22 @@
     color: white;
     font-size: 20px;   
   }
-
 body{
-    background-image: url(../images/miscellaneous/Picture2.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-}
+
 div h3 {
    text-align: center;
-   padding: 15px;
+   padding: 50px;
 }
 section{
     margin-top: 20%;
     margin-bottom: 20%;
 }
 
-
 section h2{
     text-align: center;
 }
 
-footer{
-    text-align: center;
-    background-color: black;
-    color: white;
- }
 
 h6{
     text-align: center;
@@ -52,4 +43,41 @@ h6{
 .header h2 a{
     text-decoration: none;
     color: white;
+}
+    .dairy, .fruits, .proteins, .bakery, .snacks, .frozen {
+    position: relative;
+    display: inline-block;
+}
+.drop-dairy, .drop-fruits, .drop-proteins, .drop-bakery, .drop-snacks, .drop-frozen {
+    background-color: gray;
+    color:white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 21px;
+}
+.row a {
+    color:black;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    
+}
+.row a:hover{
+    color: rgb(145, 142, 142);
+    text-decoration: none;
+    
+}
+.drop-dairy:hover, .drop-fruits:hover, .drop-proteins:hover, .drop-bakery:hover, .drop-snacks:hover, .drop-frozen:hover{
+    background-color:  rgb(100, 73, 73);
+}
+
+.contact h3{
+    text-decoration: underline;
+    color: red;
+   
+}
+.contact legend{
+    text-decoration: underline;
 }
