@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../templates/Scripts/EditProduct.js"></script>
     <style>
         body {
             padding-top: 50px
@@ -43,6 +44,7 @@
     <!-- End of navigation bar -->
 
     <!-- Start of edit order section -->
+    <div id="PList">
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">List of products</li>
         <li class="list-group-item ProductList">Current Quantities</li>
@@ -220,6 +222,7 @@
             <button type="button" class="btn btn-danger">Delete</button>
         </li>
     </ul>
+    <div id="Strawberries">
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">Strawberries</li>
         <li class="list-group-item ProductList">800</li>
@@ -233,19 +236,22 @@
             <button type="button" class="btn btn-danger">Delete</button>
         </li>
     </ul>
+    </div>
+    <div id="Turkey">
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">Turkey</li>
         <li class="list-group-item ProductList">600</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
             <br>
             <br>
             <button type="button" class="btn btn-primary">Remove</button>
         </li>
         <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
         </li>
     </ul>
+    </div>
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">Yogurt</li>
         <li class="list-group-item ProductList">700</li>
@@ -259,6 +265,7 @@
             <button type="button" class="btn btn-danger">Delete</button>
         </li>
     </ul>
+    </div>
 
     <!-- End of edit order section -->
     <a href="../templates/OrderList.html" class="btn btn-info">Save</a>

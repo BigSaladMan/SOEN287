@@ -1,3 +1,4 @@
+
 /* all buttons */
 ul.list-group.list-group-horizontal {
   margin: auto;
@@ -48,16 +49,20 @@ button.btn.btn-primary {
 
 /* save button */
 a.btn.btn-info {
-  width: 8%;
+  width: 9%;
   position: relative;
-  left: 87%;
+  left: 86%;
+  background-color: green;
+  border-color: green;
   font-family: "Comic Sans MS";
   word-wrap: break-word;
 }
 button.btn.btn-info {
-  width: 8%;
+  width: 9%;
   position: relative;
-  left: 87%;
+  left: 86%;
+  background-color: green;
+  border-color:green;
   font-family: "Comic Sans MS";
   word-wrap: break-word;
 }
