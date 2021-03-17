@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="box">
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+          <div class = "product-category">
+              <h1>Category: Fruits and Vegetables</h1>
+              
+        <div class = "product-imgs">
+          <div class = "img-display">
+              <img src = "carrots.jfif">
+              </div>
+    
+            <div class = "further-product-detail">
+            <h2>Nutritional Values</h2>
+            <p>It is crunchy, tasty, and highly nutritious. Carrots are a particularly good source of beta carotene, fiber, vitamin K1, potassium, and antioxidants.They also have a number of health benefits. They’re a weight-loss-friendly food and have been linked to lower cholesterol levels and improved eye health. No artificials, No added sugars, Paleo-friendly, Vegan-friendly, Vegetarian-friendly, Whole30-friendly.</p>
+                <table>
+                  <tr>
+                    <th colspan="2">Nutrition facts for two small-to-medium raw carrots(100g)</th>
+                  </tr>
+                  <tr>
+                    <td>Calories</td>
+                    <td>41</td>
+                  </tr>
+                  <tr>
+                    <td>Water</td>
+                    <td>88%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>0.9g</td>
+                  </tr>
+                  <tr>
+                    <td>Carbs</td>
+                    <td>9.6g</td>
+                  </tr>
+                  <tr>
+                    <td>Sugar</td>
+                    <td>4.7g</td>
+                  </tr>
+                  <tr>
+                    <td>Fiber</td>
+                    <td>2.8g</td>
+                  </tr>
+                  <tr>
+                    <td>Fat</td>
+                    <td>0.2g</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+          </div>
+          
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">Carrots</h2>
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <span>5(9)</span>
+          </div>
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price(/3lb): <span>$2.38</span></p>
+            <p class = "new-price">New Price(/3lb): <span>$1.99</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>Product Description </h2>
+            <p>1 medium carrot / 80g serving counts as 1 of 5 a day. Eating plenty of fruit and vegetables is one of the most important dietary changes needed to improve your diet and health. Aim for at least 5 different portions of fruit or veg a day, they contain nutrients vital for health. fresh, frozen, dried, canned and juice all count.</p>
+            <p>FRESHNESS GUARANTEED. You want the freshest for your family and so do we. We've trained our Associates
+            to pick the best and freshest products to meet your expectations.</p>
+            
+            <ul>
+              <li>Color: <span>Red</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Organic Product: <span>Yes</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+          </div>
+          <script>
+            function calculateAmount() {
+                /*display the result*/
+                var amount = document.getElementById('qty').value;
+                var tot_price = amount * 1.99;
+                document.getElementById("price").innerHTML = tot_price.toFixed(2);
+            }
+        </script>
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "0" id="qty" onclick="calculateAmount()">
+              
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            <button type = "remove" class = "btn">Remove from Cart</button>
+            <button type = "button" class = "btn">Compare</button>
+
+          <div class = "total-calculation">
+            <p>Total Price per lbs: $<span id="price">0.00</span></p>
+        </div>
+        </div>
+            
+        </div>
+      </div>
+      </div>
+  </body>
+</html>
+  

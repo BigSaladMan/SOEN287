@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="box">
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+          <div class = "product-category">
+              <h1>Category: Fruits and Vegetables</h1>
+              
+        <div class = "product-imgs">
+          <div class = "img-display">
+              <img src = "apples.jfif">
+              </div>
+    
+            <div class = "further-product-detail">
+            <h2>Nutritional Values</h2>
+            <p>Red apples are high in fiber, vitamin C, and various antioxidants. They are also very filling, considering their low calorie count. Studies show that eating apples can have multiple benefits for your health. No artificials, No added sugars, Paleo-friendly, Vegan-friendly, Vegetarian-friendly, Whole30-friendly.</p>
+                <table>
+                  <tr>
+                    <th colspan="2">Nutrition facts for one raw, unpeeled apple (100g)</th>
+                  </tr>
+                  <tr>
+                    <td>Calories</td>
+                    <td>52</td>
+                  </tr>
+                  <tr>
+                    <td>Water</td>
+                    <td>86%</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>0.3g</td>
+                  </tr>
+                  <tr>
+                    <td>Carbs</td>
+                    <td>13.8g</td>
+                  </tr>
+                  <tr>
+                    <td>Sugar</td>
+                    <td>10.4g</td>
+                  </tr>
+                  <tr>
+                    <td>Fiber</td>
+                    <td>2.4g</td>
+                  </tr>
+                  <tr>
+                    <td>Fat</td>
+                    <td>0.2g</td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+          </div>
+          
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">Red Apples</h2>
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>
+            <span>4.5(18)</span>
+          </div>
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price(/3lb): <span>$6.78</span></p>
+            <p class = "new-price">New Price(/3lb): <span>$3.57</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>Product Description </h2>
+            <p>Red Delicious apples are an American classic with mild sweet flavors and only a few notes of acidity. They are perfect for snacking raw or added in a salad.</p>
+            <p>FRESHNESS GUARANTEED. You want the freshest for your family and so do we. We've trained our Associates
+                to pick the best and freshest products to meet your expectations.</p>
+            
+            <ul>
+              <li>Color: <span>Red</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Organic Product: <span>Yes</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+          </div>
+          <script>
+            function calculateAmount() {
+                /*display the result*/
+                var amount = document.getElementById('qty').value;
+                var tot_price = amount * 3.57;
+                document.getElementById("price").innerHTML = tot_price.toFixed(2);
+            }
+        </script>
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "0" id="qty" onclick="calculateAmount()">
+              
+            <button type = "button" class = "btn">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            <button type = "remove" class = "btn">Remove from Cart</button>
+            <button type = "button" class = "btn">Compare</button>
+
+          <div class = "total-calculation">
+            <p>Total Price per lbs: $<span id="price">0.00</span></p>
+        </div>
+        </div>
+            
+        </div>
+      </div>
+      </div>
+  </body>
+</html>
+  
