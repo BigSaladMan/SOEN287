@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EditOrder</title>
+    <title>OrderList</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/BackStore.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <!-- Start of navigation bar -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="../templates/Home.html">Home</a>
@@ -42,22 +43,19 @@
     <br>
     <!-- End of navigation bar -->
 
-    <!-- Start of edit order section -->
+    <!-- Start of order section -->
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">List of users</li>
-        <li class="list-group-item ProductList">Current Orders</li>
+        <li class="list-group-item ProductList">Orders</li>
         <li class="list-group-item New">
-            <button type="button" class="btn btn-success">New Order</button>
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-success">New</button></a>
         </li>
     </ul>
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item User">John Snow</li>
         <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
         </li>
         <li class="list-group-item Delete">
             <button type="button" class="btn btn-danger">Delete</button>
@@ -67,10 +65,7 @@
         <li class="list-group-item User">John Doe</li>
         <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
         </li>
         <li class="list-group-item Delete">
             <button type="button" class="btn btn-danger">Delete</button>
@@ -80,10 +75,7 @@
         <li class="list-group-item User">Jonathan Doe</li>
         <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
         </li>
         <li class="list-group-item Delete">
             <button type="button" class="btn btn-danger">Delete</button>
@@ -93,24 +85,14 @@
         <li class="list-group-item User">Johnny Doe</li>
         <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <a href="../templates/EditOrder.html"><button type="button" class="btn btn-primary">Edit</button></a>
         </li>
         <li class="list-group-item Delete">
             <button type="button" class="btn btn-danger">Delete</button>
         </li>
     </ul>
-    <br>
-    <div class="width_adjustment">
-        <form>
-            <button type="submit" class="btn btn-primary">Save</button>
-        </form>
-    </div>
+    <!-- End of order list -->
 
-
-    <!-- End of edit order section -->
 </body>
 
 </html>
