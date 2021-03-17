@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="../styles/LoginSignUpReset.css">
+	
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles/BackStore.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head> 
+<body>
+	<header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="Home.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Aisles.html">Aisles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ShoppingCart.html">Shopping Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UserList.html">User List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+</header>
+    <div class="loginbox">
+    <img src="../images/miscellaneous/Avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form action="#0">
+            
+         <label class="emailBox">
+          <p>Email</p>  
+          <input type="email" id="email" placeholder="Email">
+			<span class="emailText"></span>
+		</label>
+            
+         <label class="passBox">
+          <p>Password</p>
+          <input type="password" id="password" placeholder="password">
+			<span class="passText"></span>
+		 </label>
+            
+          <input type="submit" name="" value="Login">
+          <a href="reset.html">Forgot password?</a><br>
+          <a href="signup.html">Don't have an account?</a>
+        </form>
+        </div>
+    
+<script>
+		const email = document.getElementById("email");
+		const password = document.getElementById("password");
+
+		email.addEventListener('input',()=>{
+			const emailBox = document.querySelector('.emailBox');
+			const emailText = document.querySelector('.emailText');
+			const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+
+			if(email.value.match(emailPattern)){
+				emailBox.classList.add('valid');
+				emailBox.classList.remove('invalid');
+				emailText.innerHTML = "Your Email Address is Valid"; 
+			}else{
+				emailBox.classList.add('invalid');
+				emailBox.classList.remove('valid');
+				emailText.innerHTML = "Must be a valid email address."; 
+			}
+		});
+
+		password.addEventListener('input',()=>{
+			const passBox = document.querySelector('.passBox');
+			const passText = document.querySelector('.passText');
+			const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+			if(password.value.match(passPattern)){
+				passBox.classList.add('valid');
+				passBox.classList.remove('invalid');
+				passText.innerHTML = "Your Password is Valid"; 
+			}else{
+				passBox.classList.add('invalid');
+				passBox.classList.remove('valid');
+				passText.innerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+			}
+		});
+	</script>
+</body>
+</html> 

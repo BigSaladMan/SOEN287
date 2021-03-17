@@ -5,12 +5,13 @@
 <head>
    
     <link rel="stylesheet" type="text/css" href="../styles/FrontStoreSecond.css">
+    <link rel="stylesheet" type="text/css" href="../styles/FrontStore.css">
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    <title> Home </title>
+    <title> Contact </title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="/styles/BackStore.css">
@@ -49,58 +50,82 @@
 </header>
 
 
-<div class="deals" >
-    <h4 class="deals-banner"> WEEKLY DEALS! </h4>
-<table border="1" >
+<div class="contact">
+    <h3> Contact Us </h3>
+<table>
+    <form action="" name="contactForm"  method="post">
+        <legend> Fill the form below to contact us</legend>
     <tr>
-        <td class="sale-1"> 
-            <p> 3.99$ </p>
-            <img src="../images/product_images/apples.jpg">
-            <p> Save on Apples! </p> 
-        </td>    
+    <td><label for="userName" > Enter username: </label> </td>
+     <td><input type="text" id="userName" name="userName"></td>
+    </tr>
 
-        <td class="sale-2">
-           
-            <p> 3.99$ </p>
-            <img src="../images/product_images/strawberries.jpg">
-            <p> Save on Strawberries!</p>
-        </td> 
-        <td class="sale-3">
-           
-                <p> 3.99$ </p>
-                <img src="../images/product_images/carrots.jpg">
-                <p> Save on Carrots! </p>
+    <tr>
+        <td>
+            <label for="userName" > Enter username: </label>
+        </td>
+        <td>
+            <input type="text" id="userName" name="userName">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="itemName" > Enter item name: </label>
+        </td>
+        <td>
+            <input type="text" id="itemName" name="itemName">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="orderName" > Enter order number: </label>
+        </td>
+        <td>
+            <input type="text" id="orderName" name="orderName">
 
         </td>
     </tr>
+   <tr>
+       <td>
+        <label for="questions" > Enter your questions: </label>
+       </td>
+       <td>
+        <textarea id="questions "name="questions" style=" width:400px; height:300px;"></textarea>
+       </td>
+   </tr>
+    <tr>
+        <td>
+            <input type="submit" value="submit" onclick="checkOrder()">
+        </td>
+    </tr>
+
+</form>
+
+<script type="text/javascript">
+function checkOrder(){
+    var order = document.getElementByID("orderName");
+    
+    var ok = order.search(/^#[0-9]{5}[A-Z]{2}$/)
+    if (ok !== 0) {
+        alert("Incorrect order format. \n" +
+        "Please enter order code with format: #12345AB." )
+        return false;
+    }
+   
+  else 
+    return true;
+}
+
+
+</script>
+
 </table>
+    
 </div>
 
-<div class="recipes">
-    <h4 class="recipes-banner"> Our favorite recipes </h4>
-    <table border="1" >
-        <tr>
-            <td class="recipe-1"> 
-                <img src="../images/product_images/filets-truite-vapeur-soya-limette-5356.jpg">
-                <p> Steamed Trout Fillets </p> 
-            </td>    
-    
-            <td class="recipe-2">
-                <img src="../images/product_images/poulet-saute-beurre-amandes-11003.jpg">
-                <p> Almond Butter Cicken</p>
-            </td> 
-            <td class="recipe-3">
-                    <img src="../images/product_images/poulet-epice-erable-1449.jpg">
-                    <p> Spicy Roasted Chicken </p>
-    
-            </td>
-        </tr>
-    </table>
-</div>
 
-<footer class="footer-banner">
-    <a href="contact.html"> <h5> Contact us </h5> </a>
-</footer>
 
 </body>
 

@@ -1,6 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+
+
 <head>
 
     <link rel="stylesheet" type="text/css" href="../styles/FrontStore.css">
+    <link rel="stylesheet" type="text/css" href="../styles/FrontStoreSecond.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,102 +18,213 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Home Page</title>
+    <title>Aisles</title>
 
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <h1>Online Grocery Store</h1>
-            <h2>Aisles</h2>
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-3 bg-secondary"><a href="Home.html">Home Page</a> </div>
-            <div class="col-md-3 bg-secondary"><a href="ShoppingCart.html">Shopping Cart</a> </div>
-            <div class="col-md-3 bg-secondary"><a href="Signup.html"> Sign Up</a> </div>
-            <div class="col-md-3 bg-secondary"><a href="UserList.html"> User List</a> </div>
-        </div>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="Home.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Aisles.html">Aisles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ShoppingCart.html">Shopping Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserList.html">User List</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
     </header>
+    <h2 style="padding-top:50px; text-align: center;" > Aisles</h2>
+
+    <div class="deals" >
+        <h4 class="deals-banner"> WEEKLY DEALS! </h4>
+    <table border="1" >
+        <tr>
+            <td class="sale-1"> 
+                <p> 3.99$ </p>
+                <img src="../images/product_images/apples.jpg">
+                <p> Save on Apples! </p> 
+            </td>    
+    
+            <td class="sale-2">
+               
+                <p> 3.99$ </p>
+                <img src="../images/product_images/strawberries.jpg">
+                <p> Save on Strawberries!</p>
+            </td> 
+            <td class="sale-3">
+               
+                    <p> 3.99$ </p>
+                    <img src="../images/product_images/carrots.jpg">
+                    <p> Save on Carrots! </p>
+    
+            </td>
+        </tr>
+    </table>
+    </div>
     <div class="aisles">
         <h3> Food Categories</h3>
 
 
         <div class="items">
-            <h6> Fruits and Vegetables</h6>
-            <div class="row">
-                <div class="col-md-3 bg-light"><a href="../templates/product_pages/strawberry1.html">Strawberries </a>
-                    <div><img src="../images/product_images/strawberries.jpg"> </div>
+         
+           
+            <div class="dairy">
+                <button class="drop-dairy"   onclick="changeVisibility1()"> Dairy Products </button>
+
+                <script type="text/javascript">
+                    function changeVisibility1(){
+                       var x = document.getElementById("dairy-products")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="dairy-products">
+                    <a href="../templates/product_pages/milk.html">Milk <img src="../images/product_images/milk.jpg"></a>
+                    <a href="../templates/product_pages/cheese.html">Cheese <img src="../images/product_images/cheese.jpg"></a>
+                    <a href="../templates/product_pages/butter.html">Butter <img src="../images/product_images/butter.jpg"> </a>
+                    <a href="../templates/product_pages/yogurt.html">Yogurt <img src="../images/product_images/yogurt.jpg"> </a>
+         
                 </div>
-                <div class="col-md-3 bg-light"><a href="../templates/product_pages/apples.html">Apples</a>
-                    <div><img src="../images/product_images/apples.jpg"> </div>
-                </div>
-                <div class="col-md-3 bg-light"> <a href="../templates/product_pages/carrots.html">Carrots</a>
-                    <div><img src="../images/product_images/carrots.jpg"> </div>
-                </div>
-                <div class="col-md-3 bg-light"><a href="../templates/product_pages/lettuce.html">Lettuce</a>
-                    <div><img src="../images/product_images/lettuce.jpg"> </div>
+            </div>
+            <div class="fruits">
+                <button class="drop-fruits"   onclick="changeVisibility2()"> Fruits and Vegetables </button>
+
+                <script type="text/javascript">
+                    function changeVisibility2(){
+                       var x = document.getElementById("fruits-veg")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="fruits-veg">
+                    <a  href="item-descriptions/StrawberriesDescription.html">Strawberries <img src="../images/product_images/strawberries.jpg"></a>
+                    <a href="item-descriptions/applesDescription.html">Apples <img src="../images/product_images/apples.jpg"></a>
+                    <a href="item-descriptions/carrotsDescription.html">Carrots <img src="../images/product_images/carrots.jpg"> </a>
+                    <a href="../templates/product_pages/lettuce.html">Lettuce <img src="../images/product_images/lettuce.jpg"> </a>
+         
                 </div>
             </div>
             <div class="proteins">
-                <h6> Proteins</h6>
-                <div class="row">
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/groundbeef.html">Ground Beef</a>
-                        <div><img src="../images/product_images/beef.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/chicken.html">Chicken</a>
-                        <div><img src="../images/product_images/chicken.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"> <a href="../templates/product_pages/turkey.html">Turkey</a>
-                        <div><img src="../images/product_images/turkey.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/steak.html">Steak</a>
-                        <div><img src="../images/product_images/steak.jpg"> </div>
-                    </div>
+                <button class="drop-proteins"   onclick="changeVisibility3()"> Proteins </button>
+
+                <script type="text/javascript">
+                    function changeVisibility3(){
+                       var x = document.getElementById("proteins-products")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="proteins-products">
+                    <a  href="../templates/product_pages/groundbeef.html">Ground Beef <img src="../images/product_images/beef.jpg"></a>
+                    <a href="../templates/product_pages/chicken.html">Chicken <img src="../images/product_images/chicken.jpg"></a>
+                    <a href="../templates/product_pages/turkey.html">Turkey <img src="../images/product_images/turkey.jpg"> </a>
+                    <a href="../templates/product_pages/steak.html">Steak <img src="../images/product_images/steak.jpg"> </a>
+         
                 </div>
             </div>
-            <div class="dairy">
-                <h6> Dairy Products</h6>
-                <div class="row">
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/milk.html">Milk</a>
-                        <div><img src="../images/product_images/milk.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/cheese.html">Cheese</a>
-                        <div><img src="../images/product_images/cheese.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"> <a href="../templates/product_pages/butter.html">Butter</a>
-                        <div><img src="../images/product_images/butter.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/yogurt.html">Yogurt</a>
-                        <div><img src="../images/product_images/yogurt.jpg"> </div>
-                    </div>
+            <div class="bakery">
+                <button class="drop-bakery"   onclick="changeVisibility4()"> Bakery </button>
+
+                <script type="text/javascript">
+                    function changeVisibility4(){
+                       var x = document.getElementById("bakery-products")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="bakery-products">
+                    <a  href="../templates/product_pages/bread.html">Bread <img src="../images/product_images/bread.jpg"></a>
+                    <a href="../templates/product_pages/muffins.html">Muffins <img src="../images/product_images/muffins.jpg"></a>
+                    <a href="../templates/product_pages/croissants.html">Croissants <img src="../images/product_images/croissants.jpg"> </a>
+                    <a href="../templates/product_pages/pie.html">Pie <img src="../images/product_images/pie.jpg"> </a>
+         
                 </div>
-
             </div>
-            <div class="Bakery">
-                <h6> Bakery</h6>
-                <div class="row">
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/bread.html">Bread</a>
-                        <div><img src="../images/product_images/bread.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/muffins.html">Muffins</a>
-                        <div><img src="../images/product_images/muffins.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"> <a href="../templates/product_pages/croissants.html">Croissants</a>
-                        <div><img src="../images/product_images/croissants.jpg"> </div>
-                    </div>
-                    <div class="col-md-3 bg-light"><a href="../templates/product_pages/pie.html">Pie</a>
-                        <div><img src="../images/product_images/pie.jpg"> </div>
-                    </div>
+            <div class="snack">
+                <button class="drop-snacks"   onclick="changeVisibility5()"> Snacks </button>
+
+                <script type="text/javascript">
+                    function changeVisibility5(){
+                       var x = document.getElementById("snacks-products")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="snacks-products">
+                    <a  href="item-descriptions/chipsDescription.html"> Chips <img src="../images/product_images/chips.jpg"></a>
+                    <a href="item-descriptions/crackersDescription.html"> Crackers <img src="../images/product_images/crackers.jpg"></a>
+                    <a href="item-descriptions/chocolateDescription.html"> Chocolate <img src="../images/product_images/chocolate.jpg"> </a>
+                    <a href="../templates/product_pages/.html"> Snack bar<img src="../images/product_images/snackbar.jpg"> </a>
+         
                 </div>
+            </div>
+            <div class="frozen">
+                <button class="drop-frozen"   onclick="changeVisibility6()"> Frozen </button>
 
+                <script type="text/javascript">
+                    function changeVisibility6(){
+                       var x = document.getElementById("frozen-products")
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility =  "visible";
+                        }
+                        else {
+                            x.style.visibility =  "hidden"
+                        }
+                    }
+                </script>
+                <div class="row" id="frozen-products">
+                    <a  href="item-descriptions/icecreamDescription.html"> Ice Cream <img src="../images/product_images/icecream.jpg"></a>
+                    <a href="item-descriptions/frozenfruitsDescription.html"> Frozen fruits <img src="../images/product_images/frozenfruits.jpg"></a>
+                    <a href="item-descriptions/frozenpizzaDescription.html"> Frozen Pizza <img src="../images/product_images/pizza.jpg"> </a>
+                    <a href="../templates/product_pages/.html"> Frozen Cheesecake <img src="../images/product_images/cheesecake.jpg"> </a>
+         
+                </div>
             </div>
 
-            <footer>
 
-            </footer>
+        </div>
+           
+          
+                <footer class="footer-banner">
+                    <a href="contact.html"> <h5> Contact us </h5> </a>
+                </footer>
+
+           
 
 
 </body>
