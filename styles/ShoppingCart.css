@@ -2,6 +2,9 @@ body {
   font-family: Arial, Verdana, sans-serif;}
 p {
   line-height: 0.25em;}
+  #quantity {
+    display: inline;
+  }
 .cartheader {
   background-color: hsla(253, 1%, 1%, 0.9);
   color: white;

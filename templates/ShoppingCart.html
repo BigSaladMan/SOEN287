@@ -48,23 +48,57 @@
           class="item1details" /><br />&nbsp&nbsp&nbspStrawberries</p>
       <p>&nbsp&nbsp&nbspGeneric Brand</p>
       <p>&nbsp&nbsp&nbsp$4.50 (450g)</p>
-      &nbsp&nbsp&nbsp<button>-</button> ___ <button>+</button>
+      &nbsp&nbsp&nbsp<button onclick="minus()">-</button><p id="quantity"></p><button onclick="plus()">+</button>
     </div>
     <div class="total">
       <div class="totalprice">
-        <p class="totprice">subtotal:$4.50</p>
-        <p class="totprice">GST: $0.70</p>
-        <p class="totprice">QST: $0.34</p>
+        <br />
+        <p id ="subtotal"></p>
+        <p id="GST"></p>
+        <p id="QST"></p>
       </div>
       <div class="continueshopping">
-        <button>Continue Shopping</button>
+        <a href="Aisles.html"><button>Continue Shopping</button></a>
       </div>
       <div class="tocheckout">
-        <button>Proceed to Checkout</button>
+        <a href=""><button>Proceed to Checkout</button></a>
       </div>
     </div>
   </div>
-
+  <script>
+  var x = 1; // x represents quantity
+  var price = 4.50;
+  var subtotal = x * price;
+  var GST = subtotal * 0.05;
+  var QST = subtotal * 0.09975;
+  document.getElementById("quantity").innerHTML = x;
+  document.getElementById("subtotal").innerHTML = "subtotal: $" + subtotal.toFixed(2);
+  document.getElementById("GST").innerHTML = "GST: $" + GST.toFixed(2);
+  document.getElementById("QST").innerHTML = "QST: $" + QST.toFixed(2);
+  function plus() {
+    x++;
+    document.getElementById("quantity").innerHTML = x;
+    subtotal = price * x;
+    GST = subtotal * 0.05; 
+    QST = subtotal * 0.09975;
+    document.getElementById("subtotal").innerHTML = "subtotal: $" + subtotal.toFixed(2);
+    document.getElementById("GST").innerHTML = "GST: $" + GST.toFixed(2);
+    document.getElementById("QST").innerHTML = "QST: $" + QST.toFixed(2);
+  }
+  function minus() {
+    x--;
+    if (x < 1) {
+      x = 1;
+    }
+    document.getElementById("quantity").innerHTML = x;
+    subtotal = price * x;
+    GST = subtotal * 0.05;
+    QST = subtotal * 0.09975;
+    document.getElementById("subtotal").innerHTML = "subtotal: $" + subtotal.toFixed(2);
+    document.getElementById("GST").innerHTML = "GST: $" + GST.toFixed(2);
+    document.getElementById("QST").innerHTML = "QST: $" + QST.toFixed(2);
+  }
+</script>
 
   <div>
     <footer>
