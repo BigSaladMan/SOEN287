@@ -37,19 +37,39 @@
 
   <div class="itemdisplay">
     <div class="picture">
-      <img src="../../images/product_images/beef.jpg" alt="Ground Beef" />
+      <img src="../../images/product_images/beef.jpg" alt="Ground Beef" class="beef" />
     </div>
     <div class="descriptionandwhatnot" <p class="productname">Ground beef</p>
-      <p>1kg (2.2lbs)</p><br /><br /><br /><br /><br /><br />
+      <p>1kg (2.2lbs)</p><br /><br /><br /><br /><br />
+      <button onclick="minus()">-</button><p id="quantity"></p><button onclick="plus()">+</button>
+      <br /><br />
       <p class="price">$6.99</p>
       <form action="">
         <input type="button" name="strawberries" value="Add to Cart" />
       </form>
       <br />
-      <button> Click for Product Description </button>
+      <a href="altgroundbeef.html"><button> Click for Product Description </button></a>
     </div>
   </div>
 
+  <script>
+    var x = 1; // this stores quantity
+    document.getElementById("quantity").innerHTML = x;
+
+    function plus() {
+      x++;
+      document.getElementById("quantity").innerHTML = x;
+    }
+    
+    function minus() {
+      x--;
+      if (x < 1) { // this is so that quantity doesn't drop to 0 or less
+        x = 1;
+      }
+      document.getElementById("quantity").innerHTML = x;
+    }
+
+  </script>
 
   <div>
     <footer>
