@@ -4,6 +4,45 @@ img {
   margin-top: 100px;
   width: 450px;
   height: 300px;}
+  #quantity {
+    display: inline;
+  }
+  .beef {
+    width: 400px;
+    height: 300px;
+  }
+  .butter {
+    width: 400px;
+    height: 300px;
+  }
+  .carrots {
+    width: 400px;
+    height: 300px;
+  }
+  .cheese {
+    width: 400px;
+    height: 300px;
+  }
+  .chicken {
+    width: 400px;
+    height: 300px;
+  }
+  .lettuce {
+    width: 300px;
+    height: 300px;
+  }
+  .milk {
+    width: 300px;
+    height: 300px;
+  }
+  .turkey {
+    width: 400px;
+    height: 300px;
+  }
+  .yogurt {
+    width: 350px;
+    height: 300px;
+  }
 .itemdisplay {
   border-style: solid;
   background-color: hsla(253, 1%, 1%, 0.90);
@@ -25,24 +64,14 @@ p.price {
   font-weight: bold;}
 p.productname {
   font-family: Verdana;}
-input {
-  padding: 2px 5px 2px 5px;
-  border-radius:5px;}
-input:hover {
-  background-color: black;
-  color: beige;}
-input:active {
-  background-color: #1A1729;
-  color: #FFC1C1;}
-button {
-  background-color: white;
-  border-style: none;
-  padding: 5px 2px 5px 5px;}
-button:hover {
-  background-color: black;
-  color: beige;}
-button:active {
-  background-color: #1A1729;
-  color: #FFC1C1;}
+.buttonstyle {
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #fb2525;}
+  .buttonstyle:hover {
+    background-color: #ffc107;
+  }
+  
 footer {
   margin-top: 20px;}
