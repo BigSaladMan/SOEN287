@@ -25,15 +25,6 @@ section h2{
 h6{
     text-align: center;
 }
-.fruits li{
-    text-align: center;
-    list-style-type: none;
-}
-
-
-.proteins li{
-    list-style-type: none;
-}
 
 .row a {
     text-decoration: none;
