@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../templates/Scripts/EditProduct.js"></script>
     <style>
         body {
             padding-top: 50px
@@ -43,71 +44,259 @@
     <!-- End of navigation bar -->
 
     <!-- Start of edit order section -->
+    <div id="PList">
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">List of users</li>
-        <li class="list-group-item ProductList">Current Orders</li>
+        <li class="list-group-item User">List of products</li>
+        <li class="list-group-item ProductList">Current Quantities</li>
         <li class="list-group-item New">
-            <button type="button" class="btn btn-success" onclick=addList()>New Order</button>
+            <button type="button" class="btn btn-success" onclick=addItemToList()>New Product</button>
 
         </li>
     </ul>
+    <div id="Apples">
     <ul class="list-group list-group-horizontal" id="order">
-        <li class="list-group-item User">Jack Black</li>
-        <li class="list-group-item ProductList">1x chicken alfredo sauce, 1x spaghetti, 1x meatballs</li>
+        <li class="list-group-item User">Apples</li>
+        <li class="list-group-item ProductList">2000</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
             <br>
             <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
         </li>
         <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
         </li>
     </ul>
+    </div>
+    <div id="Bread">
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">sango bango</li>
-        <li class="list-group-item ProductList">1x red wine, 4x frozen pizza, 8x oreo cookies</li>
+        <li class="list-group-item User">Bread</li>
+        <li class="list-group-item ProductList">1000</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
             <br>
             <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
         </li>
         <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
         </li>
     </ul>
+    </div>
+    <div id="Butter">
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">Big Salad Man</li>
-        <li class="list-group-item ProductList">1x baguette, 1x 2L sprite, 1x Cruchies(tm) chips</li>
+        <li class="list-group-item User">Butter</li>
+        <li class="list-group-item ProductList">6000</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
             <br>
             <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
         </li>
         <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
         </li>
     </ul>
+    </div>
+    <div id="Carrots">
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item User">Rayan Patel</li>
-        <li class="list-group-item ProductList">25x salad head, 10x baby carrot</li>
+        <li class="list-group-item User">Carrots</li>
+        <li class="list-group-item ProductList">1000</li>
         <li class="list-group-item Edit">
-            <button type="button" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
             <br>
             <br>
-            <button type="button" class="btn btn-primary">Remove</button>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
         </li>
         <li class="list-group-item Delete">
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
         </li>
     </ul>
+    </div>
+    <div id="Cheese">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Cheese</li>
+        <li class="list-group-item ProductList">2000</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Chicken">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Chicken</li>
+        <li class="list-group-item ProductList">1000</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Croissants">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Croissants</li>
+        <li class="list-group-item ProductList">1500</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Ground Beef">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Ground Beef</li>
+        <li class="list-group-item ProductList">3000</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Lettuce">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Lettuce</li>
+        <li class="list-group-item ProductList">800</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Milk">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Milk</li>
+        <li class="list-group-item ProductList">1700</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Muffins">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Muffins</li>
+        <li class="list-group-item ProductList">400</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Pie">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Pie</li>
+        <li class="list-group-item ProductList">200</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Steak">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Steak</li>
+        <li class="list-group-item ProductList">1300</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Strawberries">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Strawberries</li>
+        <li class="list-group-item ProductList">800</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Turkey">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Turkey</li>
+        <li class="list-group-item ProductList">600</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    <div id="Yogurt">
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item User">Yogurt</li>
+        <li class="list-group-item ProductList">700</li>
+        <li class="list-group-item Edit">
+            <button type="button" class="btn btn-primary" onclick=addToList(this)>Add</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" onclick=removeFromList(this)>Remove</button>
+        </li>
+        <li class="list-group-item Delete">
+            <button type="button" class="btn btn-danger" onclick=deleteList(this)>Delete</button>
+        </li>
+    </ul>
+    </div>
+    </div>
 
     <!-- End of edit order section -->
-    <a href="../templates/OrderList.html" class="btn btn-info">Save</a>
-    <!--<button type="button" class="btn btn-info" id="savebtn" onclick="gop8()">Save</button> -->
-    <script src="BackStoreFcts.js"></script>
+    <a href="../templates/ProductList.html" class="btn btn-info">Save</a>
 </body>
 
 </html>
