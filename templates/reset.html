@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="LoginSignUpReset.css">
+</head> 
+<body>
+    <div class="loginbox">
+    <img src="rpassword.png" class="avatar">
+        <h1>Reset Password Form</h1>
+        <form id="form" action="#">
+          <label class="passBox">
+          <p>Password</p>
+          <input type="password" id="password" placeholder="Enter Password">
+			<span class="passText"></span>
+		 </label>
+          <label class="secondPass">
+          <p>Password</p>
+          <input type="password" id="second" placeholder="Enter Password">
+			<span class="secondText"></span>
+		 </label>
+          <input type="submit" name="" value="Reset Password">
+          <a href="login.html">Back to Login Page</a><br>
+          <a href="signup.html">Don't have an account?</a>
+        </form>
+    </div>
+    <script>
+		const password = document.getElementById("password");
+        const second = document.getElementById("second");
+
+
+		password.addEventListener('input',()=>{
+			const passBox = document.querySelector('.passBox');
+			const passText = document.querySelector('.passText');
+			const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+			if(password.value.match(passPattern)){
+				passBox.classList.add('valid');
+				passBox.classList.remove('invalid');
+				passText.innerHTML = "Your Password is Valid"; 
+			}else{
+				passBox.classList.add('invalid');
+				passBox.classList.remove('valid');
+				passText.innerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+			}
+		});
+        
+        second.addEventListener('input',()=>{
+			const secondPass = document.querySelector('.secondPass');
+			const secondText = document.querySelector('.secondText');
+			const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+			if(password.value.match(passPattern)){
+				secondPass.classList.add('valid');
+				secondPass.classList.remove('invalid');
+				secondText.innerHTML = "Your Password is Valid"; 
+			}else{
+				secondPass.classList.add('invalid');
+				secondPass.classList.remove('valid');
+				secondText.innerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+			}
+		});
+	</script>
+</body>
+</html> 
