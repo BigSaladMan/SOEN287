@@ -5,6 +5,7 @@
 <head>
    
     <link rel="stylesheet" type="text/css" href="../../styles/FrontStoreSecond.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,6 +74,27 @@ Product number: 0223345 </pre>
     <p> MANGO, STRAWBERRIES, PAPAYA AND PEACHES   </p>
     
 
+</div>
+   <script>
+    function calculateAmount() {
+        /*display the result*/
+        var amount = document.getElementById('qty').value;
+        var tot_price = amount * 4.99;
+        document.getElementById("price").innerHTML = tot_price.toFixed(2);
+    }
+</script>
+  <div class = "purchase-info">
+    <input type = "number" min = "0" value = "0" id="qty" onclick="calculateAmount()">
+      
+    <button type = "button" class = "btn">
+      Add to Cart <i class = "fas fa-shopping-cart"></i>
+    </button>
+    <button type = "remove" class = "btn">Remove from Cart</button>
+    <button type = "button" class = "btn">Compare</button>
+
+  <div class = "total-calculation">
+    <p>Total Price per lbs: $<span id="price">0.00</span></p>
+</div>
 </div>
 
 </body>
